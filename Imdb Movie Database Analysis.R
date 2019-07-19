@@ -41,6 +41,9 @@ plot(Imdb_subset$Budget,Imdb_subset$`Gross Revenue`,
 
 abline(lm(Imdb_subset$`Gross Revenue`~Imdb_subset$Budget),col="red")
 
+#Lets put a Moving Average line on top of regression line and plot it by Col Blue
+#Moving Average model explains current value as a result from reccently passed random error terms as well as the current one.
+
 lines(lowess(Imdb_subset$Budget,Imdb_subset$`Gross Revenue`),col="Blue")
 
 reg <- lm(Imdb_subset$`Gross Revenue`~ Imdb_subset$Budget)
