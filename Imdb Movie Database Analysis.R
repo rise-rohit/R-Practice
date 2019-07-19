@@ -16,7 +16,7 @@ str(Imdb)
 
 library(dplyr)
 
-#filtering on the basis of country and selecting the required columns of interest.
+#filtering on the basis of language and color and selecting the required columns of interest.
 
 Imdb_subset <- Imdb %>% filter(Language=="English",`Color/B&W`=="Color") %>% select(`IMDb Score (1-10)`,`Total Reviews`,`Cast FB Likes`,`Gross Revenue`,Budget,Rating,Genre,Country)
 
